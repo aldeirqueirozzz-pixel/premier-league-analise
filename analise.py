@@ -1,3 +1,4 @@
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -42,5 +43,7 @@ sns.barplot(x=percentual.index, y=percentual.values)
 plt.title("Resultados da Premier League 2024/25 (%)")
 plt.ylabel("% dos jogos")
 plt.xlabel("")
+
+os.makedirs("imagens", exist_ok=True)
 plt.savefig("imagens/resultados.png")
 plt.show()
